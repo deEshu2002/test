@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Compile Tailwind
-        run: npx tailwindcss -i ./src/style.css -o ./dist/output.css
+        run: npx tailwindcss -i ./src/style.css -o ./src/style.css
       - name: Build
         run: pnpm build
       - name: Setup Pages
