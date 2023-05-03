@@ -42,6 +42,8 @@ jobs:
           cache-dependency-path: ./pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install
+      - name: Compile Tailwind
+        run: npx tailwindcss -i ./src/style.css -o ./dist/output.css
       - name: Build
         run: pnpm build
       - name: Setup Pages
