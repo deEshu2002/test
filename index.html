@@ -22,7 +22,7 @@
           </a>
         </p>
       </div>
-      <button data-collapse-toggle="banner" type="button"
+      <button id="banner-remove-button" data-collapse-toggle="banner" type="button"
         class="ml-auto flex items-center text-white rounded-lg text-sm p-0.5 dark:hover:bg-gray-600 dark:hover:text-white">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -32,9 +32,9 @@
       </button>
     </div>
 
-    <nav class="bg-white dark:bg-gray-900 w-full z-20 border-b border-gray-200 dark:border-gray-600">
+    <nav class="bg-white w-full border-b border-neutral-200">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="/" class="flex items-center">
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Clamp</span>
         </a>
         <div class="flex md:order-2">
@@ -42,17 +42,7 @@
             class=" text-white bg-neutral-900 hover:bg-neutral-800 focus:ring-4 focus:outline-none focus:ring-neutral-300 rounded-md font-semibold text-sm px-4 py-3.5 text-center mr-3 md:mr-">
             Connect Wallet
           </button>
-          <button data-collapse-toggle="navbar-sticky" type="button"
-            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
+
         </div>
       </div>
     </nav>
@@ -81,7 +71,7 @@
         Buy crypto index anytime, anywhere.
       </h1>
 
-      <form class="flex items-center mt-10 mx-auto w-[35vw]">
+      <form class="flex items-center mt-10 mx-auto w-[35vw] min-w-[20rem]">
         <div class="relative z-0 w-full">
           <input type="email" name="floating_search" id="floating_search"
             class="block py-3.5 px-2 w-full text-base text-gray-900 bg-transparent border-2 border-solid rounded-md border-[#E4DFDD] focus:border-[#584C46] appearance-none focus:outline-none focus:ring-0 peer"
@@ -102,13 +92,14 @@
       </form>
     </section>
 
-    <section class="mx-auto flex relative w-full flex-wrap gap-16 max-w-7xl mt-20">
+    <section class="mx-auto flex relative w-fit flex-wrap gap-16 max-w-7xl my-20">
+
       <article
         class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -119,8 +110,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -176,7 +167,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -187,8 +178,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -244,7 +235,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -255,8 +246,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -312,7 +303,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -323,8 +314,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -380,7 +371,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -391,8 +382,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -448,7 +439,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -459,8 +450,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -516,7 +507,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -527,8 +518,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -584,7 +575,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -595,8 +586,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -652,7 +643,7 @@
         <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="flex justify-between px-4 pt-4">
             <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
-            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+            <button data-dropdown-toggle="dropdown"
               class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
               <span class="sr-only">Open dropdown</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -663,8 +654,8 @@
               </svg>
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdown"
-              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <div
+              class="z-10 hidden absolute right-5 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
               <ul class="py-2" aria-labelledby="dropdownButton">
                 <li>
                   <a href="#"
@@ -715,6 +706,14 @@
             Buy
           </button>
       </article>
+
+
+
+
+
+
+
+
     </section>
   </main>
 
