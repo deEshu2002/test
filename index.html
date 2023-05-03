@@ -103,58 +103,618 @@
       </form>
     </section>
 
-    <section>
-      <article>
-        <div class="index-card border border-black">
-          <div class="tokens-color-specifier-wrapper flex flex-row items-center justify-center">
-            <div class="h-2 w-full bg-[#F19241]"></div>
-            <div class="h-2 w-full bg-pink-500"></div>
-          </div>
-          <div class="index-card-content-body p-4">
-            <div class="flex flex-row items-start justify-between">
-              <h1 class="text-lg font-semibold leading-snug">WBTC-WETH</h1>
+    <section class="mx-auto flex relative w-full flex-wrap gap-16 max-w-7xl mt-20">
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
             </div>
-            <div class="flex flex-row items-start justify-between mt-12">
-              <div class="underlying-tokens-wrapper">
-                <p class="text-gray-500 font-medium select-none text-xs font-medium">
-                  Underlying Tokens
-                </p>
-                <div class="underlying-tokens-list-wrapper flex flex-row items-center justify-start gap-1 mt-2">
-                  <img alt="WBTC" src="/tokens/WBTC.svg" width="24" height="24" decoding="async" data-nimg="1"
-                    style="color: transparent" /><img alt="WETH" src="/tokens/WETH.svg" width="24" height="24"
-                    decoding="async" data-nimg="1" style="color: transparent" />
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
                 </div>
               </div>
-              <div class="price-change-wrapper text-right">
-                <p class="text-gray-500 font-medium select-none text-xs font-medium">
-                  Price Change <br />(in 24hrs)
-                </p>
-                <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-red-500">
-                    <line x1="7" y1="7" x2="17" y2="17"></line>
-                    <polyline points="17 7 17 17 7 17"></polyline>
-                  </svg>-2.1%</span>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <div style="">
-              <button
-                class="clamp_button clamp_button-primary clamp_button-medium font-semibold font-headline px-[20px] rounded-none w-full">
-                <div class="button-shadow-container">
-                  <div class="button-content-container">Buy</div>
-                </div>
-              </button>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none">
-            <ol tabindex="-1"
-              class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:top-auto sm:bottom-0 sm:right-0 sm:flex-col md:max-w-[420px]">
-            </ol>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
+      </article>
+      <article
+        class="exchange-card relative before:absolute before:transform before:duration-300 before:ease-linear before:h-60 before:-right-6 before:-bottom-6 before:w-[22rem] before:-z-10 before:bg-orange-100 hover:before:h-[17rem] hover:before:w-[25rem]">
+        <div class="w-[22rem] bg-white border border-black shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="flex justify-between px-4 pt-4">
+            <h5 class="text-xl mt-1 font-medium text-gray-900 dark:text-white">WBTC-WETH</h5>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"
+              class="inline-block text-gray-500 hover:bg-gray-100 rounded-lg text-sm p-1.5" type="button">
+              <span class="sr-only">Open dropdown</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdown"
+              class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2" aria-labelledby="dropdownButton">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export
+                    Data</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col px-4 pb-4 mt-8 md:mt-10">
+            <div class="flex justify-between">
+              <div href="#" class="inline-flex flex-col justify-end px-2 py-2 text-sm font-medium text-center">
+                <span class="mb-1">Underlying Tokens</span>
+                <div class="flex">
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                  <img class="w-8" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png" />
+                </div>
+              </div>
+              <div href="#" class="inline-flex flex-col items-end px-4 py-2 text-sm font-medium text-center">
+                <div class="flex gap-1 items-center"><span class="pt-1">24h</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex">
+                  <span class="text-2xl font-medium text-black flex flex-row items-center justify-end gap-1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-red-500">
+                      <line x1="7" y1="7" x2="17" y2="17"></line>
+                      <polyline points="17 7 17 17 7 17"></polyline>
+                    </svg>-2.1%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="w-full h-12 bg-black text-white">
+            Buy
+          </button>
       </article>
     </section>
   </main>
